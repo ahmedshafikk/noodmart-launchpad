@@ -2,17 +2,52 @@ import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CheckCircle } from 'lucide-react';
 
+const GOOGLE_FORM_ACTION_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSex2R2HFWmD3UImiDVq-gTAtF1YHuRT3qPsWVvNoOzZZy5HmQ/formResponse';
+
+const GOOGLE_FORM_ENTRY_IDS = {
+  name: 'entry.1814000453',
+  email: 'entry.435630173',
+  role: 'entry.386182',
+};
+
+const GOOGLE_FORM_ROLE_LABELS: Record<string, string> = {
+  customer: 'Customer',
+  restaurant: 'Restaurant-Vendor',
+  partner: 'Partner',
+};
+
 const WaitlistSection = () => {
   const { lang, t } = useLanguage();
   const fontClass = lang === 'ar' ? 'font-arabic' : 'font-english';
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', role: 'customer' });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Ready to connect to Formspree / Supabase / Google Forms / Custom API
-    console.log('Waitlist submission:', formData);
-    setSubmitted(true);
+    setSubmitting(true);
+
+    const params = new URLSearchParams();
+    params.append(GOOGLE_FORM_ENTRY_IDS.name, formData.name);
+    params.append(GOOGLE_FORM_ENTRY_IDS.email, formData.email);
+    params.append(GOOGLE_FORM_ENTRY_IDS.role, GOOGLE_FORM_ROLE_LABELS[formData.role] ?? formData.role);
+
+    try {
+      // Google Forms doesn't send CORS headers, so the response is opaque
+      // (no-cors) — a resolved fetch here just means the request went out.
+      await fetch(GOOGLE_FORM_ACTION_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString(),
+      });
+    } catch (error) {
+      console.error('Waitlist submission failed:', error);
+    } finally {
+      setSubmitting(false);
+      setSubmitted(true);
+    }
   };
 
   return (
@@ -70,7 +105,8 @@ const WaitlistSection = () => {
               </div>
               <button
                 type="submit"
-                className={`w-full gradient-primary text-primary-foreground py-3.5 rounded-xl font-bold text-lg hover:opacity-90 transition-all hover:scale-[1.02] glow-primary`}
+                disabled={submitting}
+                className={`w-full gradient-primary text-primary-foreground py-3.5 rounded-xl font-bold text-lg hover:opacity-90 transition-all hover:scale-[1.02] glow-primary disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100`}
               >
                 {t('waitlist.submit')}
               </button>
