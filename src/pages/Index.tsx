@@ -1,3 +1,4 @@
+import CountdownBar from '@/components/landing/CountdownBar';
 import Navbar from '@/components/landing/Navbar';
 import HeroSection from '@/components/landing/HeroSection';
 import ValueProps from '@/components/landing/ValueProps';
@@ -11,6 +12,7 @@ import Footer from '@/components/landing/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <CountdownBar />
       <Navbar />
       <HeroSection />
       <ValueProps />

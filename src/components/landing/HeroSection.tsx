@@ -7,7 +7,7 @@ const HeroSection = () => {
   const fontClass = lang === 'ar' ? 'font-arabic' : 'font-english';
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden gradient-warm pt-20">
+    <section className="relative min-h-screen flex items-center overflow-hidden gradient-warm pt-[6.5rem] md:pt-[7.5rem]">
       {/* Decorative blobs */}
       <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-accent/10 blur-3xl" />

@@ -19,6 +19,13 @@ const translations: Record<Lang, Record<string, string>> = {
     'nav.waitlist': 'قائمة الانتظار',
     'nav.faq': 'الأسئلة الشائعة',
 
+    // Countdown
+    'countdown.label': 'الإطلاق خلال',
+    'countdown.days': 'يوم',
+    'countdown.hours': 'ساعة',
+    'countdown.minutes': 'دقيقة',
+    'countdown.seconds': 'ثانية',
+
     // Hero
     'hero.badge': '🚀 إطلاق قريب في سمنود والقاهرة وحدائق القبة',
     'hero.title1': 'أطعمتك المفضلة',
@@ -117,6 +124,12 @@ const translations: Record<Lang, Record<string, string>> = {
     'nav.restaurants': 'For Restaurants',
     'nav.waitlist': 'Waitlist',
     'nav.faq': 'FAQ',
+
+    'countdown.label': 'Launching in',
+    'countdown.days': 'Days',
+    'countdown.hours': 'Hrs',
+    'countdown.minutes': 'Min',
+    'countdown.seconds': 'Sec',
 
     'hero.badge': '🚀 Launching Soon in Samanoud, Cairo & Hadayek El Kobba',
     'hero.title1': 'Your Favorite Food',
