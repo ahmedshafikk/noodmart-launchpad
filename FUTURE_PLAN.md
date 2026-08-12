@@ -12,3 +12,24 @@ Once the App Store / Play Store listings exist (even as pre-launch pages), add "
 
 ## Waitlist → launch notification
 The Google Form waitlist is collecting emails now. When launch is ready, export that data and notify everyone on the list.
+
+## Real launch date
+Swap `LAUNCH_DATE` in `src/components/landing/CountdownBar.tsx` from the placeholder to the confirmed date. Highest priority — everything else assumes this is set.
+
+## App screenshots / preview section
+Once the Flutter app has real UI, add a section showing actual app screens instead of the generic burger/pizza hero art, so visitors see the real product.
+
+## Basic analytics
+Add Google Analytics or Cloudflare Web Analytics (free, privacy-friendlier) to see waitlist conversion and traffic sources before launch.
+
+## SEO pass
+Add an Open Graph image (`og:image`, currently missing), a `sitemap.xml`, and proper meta descriptions per language for better link previews and search indexing.
+
+## CI auto-deploy
+Add a GitHub Action so pushes to `main` auto-trigger a Render deploy instead of relying on Render's own webhook/manual deploy.
+
+## Waitlist count display
+"X people already joined" social-proof counter on the waitlist section. Needs a count source — Google Form doesn't expose response count via API, so this would need a small backend or manual updates.
+
+## Post-launch redirect plan
+Once the Flutter app is live, decide whether this landing page stays as marketing or redirects/adds a "we're live" banner pointing to the store listings.
