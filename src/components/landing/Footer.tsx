@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Linkedin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
@@ -16,16 +17,16 @@ const Footer = () => {
       <div className={`container mx-auto px-4 md:px-8 text-center ${fontClass}`}>
         <span className="text-2xl font-bold text-gradient-primary font-english tracking-tight">NoodMart</span>
         <p className="mt-3 text-cream/60 text-sm">{t('footer.tagline')}</p>
-        <div className="mt-4 flex justify-center gap-4">
-          {['Twitter', 'Instagram', 'Facebook'].map((social) => (
-            <a
-              key={social}
-              href="#"
-              className="text-cream/40 hover:text-primary text-xs transition-colors"
-            >
-              {social}
-            </a>
-          ))}
+        <div className="mt-4 flex justify-center">
+          <a
+            href="https://www.linkedin.com/company/noodmart"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="text-cream/40 hover:text-primary transition-colors"
+          >
+            <Linkedin className="w-5 h-5" />
+          </a>
         </div>
         <div className="mt-4 flex justify-center flex-wrap gap-x-5 gap-y-2">
           {legalLinks.map((link) => (
