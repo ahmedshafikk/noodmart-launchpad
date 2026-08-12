@@ -27,13 +27,13 @@ const translations: Record<Lang, Record<string, string>> = {
     'countdown.seconds': 'ثانية',
 
     // Hero
-    'hero.badge': '🚀 إطلاق قريب في سمنود والقاهرة وحدائق القبة',
+    'hero.badge': '🚀 إطلاق قريب في سمنود (الغربية) وحدائق القبة (القاهرة)',
     'hero.title1': 'أطعمتك المفضلة',
     'hero.title2': 'من أفضل المطاعم حولك',
     'hero.subtitle': 'نودمارت هو سوق الطعام الذكي الذي يربطك بأفضل المطاعم والبائعين المحليين. اكتشف، اطلب، واستمتع بتجربة طعام لا مثيل لها.',
     'hero.cta1': 'انضم لقائمة الانتظار',
     'hero.cta2': 'للمطاعم',
-    'hero.trust': 'قريبًا في سمنود والقاهرة وحدائق القبة • إطلاق قريب',
+    'hero.trust': 'قريبًا في سمنود (الغربية) وحدائق القبة (القاهرة) • إطلاق قريب',
 
     // Value Props
     'value.title': 'لماذا نودمارت؟',
@@ -103,7 +103,7 @@ const translations: Record<Lang, Record<string, string>> = {
     'faq.q3': 'هل يمكن للمطاعم التسجيل مبكرًا؟',
     'faq.a3': 'بالطبع! نرحب بجميع المطاعم والبائعين للتسجيل المبكر والاستفادة من مزايا الانضمام قبل الإطلاق.',
     'faq.q4': 'ما هي المناطق التي ستبدأون بها؟',
-    'faq.a4': 'سنبدأ الإطلاق في سمنود والقاهرة وحدائق القبة، وسنتوسع تدريجيًا لتغطية مناطق أخرى في مصر.',
+    'faq.a4': 'سنبدأ الإطلاق في سمنود بمحافظة الغربية، وحدائق القبة بالقاهرة، وسنتوسع تدريجيًا لتغطية مناطق أخرى في مصر.',
     'faq.q5': 'هل سيكون هناك تطبيق موبايل؟',
     'faq.a5': 'نعم، نعمل على تطبيق موبايل لنظامي iOS و Android سيكون متاحًا عند الإطلاق أو بعده بفترة قصيرة.',
 
@@ -138,13 +138,13 @@ const translations: Record<Lang, Record<string, string>> = {
     'countdown.minutes': 'Min',
     'countdown.seconds': 'Sec',
 
-    'hero.badge': '🚀 Launching Soon in Samanoud, Cairo & Hadayek El Kobba',
+    'hero.badge': '🚀 Launching Soon in Samanoud (Gharbia) & Hadayek El Kobba (Cairo)',
     'hero.title1': 'Your Favorite Food',
     'hero.title2': 'From the Best Local Spots',
     'hero.subtitle': 'NoodMart is the smart food marketplace connecting you with the best restaurants and local vendors. Discover, order, and enjoy an unmatched dining experience.',
     'hero.cta1': 'Join the Waitlist',
     'hero.cta2': 'For Restaurants',
-    'hero.trust': 'Coming Soon to Samanoud, Cairo & Hadayek El Kobba • Launching Soon',
+    'hero.trust': 'Coming Soon to Samanoud (Gharbia) & Hadayek El Kobba (Cairo) • Launching Soon',
 
     'value.title': 'Why NoodMart?',
     'value.subtitle': 'A completely different food ordering experience',
@@ -209,7 +209,7 @@ const translations: Record<Lang, Record<string, string>> = {
     'faq.q3': 'Can restaurants register early?',
     'faq.a3': 'Absolutely! We welcome all restaurants and vendors to register early and benefit from pre-launch advantages.',
     'faq.q4': 'Which areas will you start in?',
-    'faq.a4': 'We\'ll launch in Samanoud, Cairo, and Hadayek El Kobba first and gradually expand to cover other areas in Egypt.',
+    'faq.a4': 'We\'ll launch in Samanoud (Gharbia Governorate) and Hadayek El Kobba (Cairo) first, then gradually expand to cover other areas in Egypt.',
     'faq.q5': 'Will there be a mobile app?',
     'faq.a5': 'Yes, we\'re working on mobile apps for iOS and Android that will be available at or shortly after launch.',
 
