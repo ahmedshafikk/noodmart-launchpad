@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Users, Upload, Eye, TrendingUp, CheckCircle } from 'lucide-react';
 
@@ -32,6 +33,12 @@ const ForRestaurants = () => {
             </div>
           ))}
         </div>
+
+        <p className={`text-center mt-8 text-sm text-muted-foreground ${fontClass}`}>
+          <Link to="/seller-agreement" className="underline hover:text-primary transition-colors">
+            {t('legal.sellerAgreement')}
+          </Link>
+        </p>
       </div>
     </section>
   );

@@ -116,6 +116,13 @@ const translations: Record<Lang, Record<string, string>> = {
     // Footer
     'footer.tagline': 'سوق الطعام الذكي • قريبًا',
     'footer.rights': '© ٢٠٢٦ نودمارت. جميع الحقوق محفوظة.',
+
+    // Legal
+    'legal.back': '← العودة للرئيسية',
+    'legal.privacy': 'سياسة الخصوصية',
+    'legal.terms': 'شروط الخدمة',
+    'legal.deleteAccount': 'حذف الحساب',
+    'legal.sellerAgreement': 'اتفاقية البائع',
   },
   en: {
     'nav.home': 'Home',
@@ -213,6 +220,13 @@ const translations: Record<Lang, Record<string, string>> = {
 
     'footer.tagline': 'The Smart Food Marketplace • Coming Soon',
     'footer.rights': '© 2026 NoodMart. All rights reserved.',
+
+    // Legal
+    'legal.back': '← Back to Home',
+    'legal.privacy': 'Privacy Policy',
+    'legal.terms': 'Terms of Service',
+    'legal.deleteAccount': 'Delete Account',
+    'legal.sellerAgreement': 'Seller Agreement',
   },
 };
 
