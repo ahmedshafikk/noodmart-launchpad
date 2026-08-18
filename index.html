@@ -3,13 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#F9740B" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>نودمارت - سوق الطعام الذكي | NoodMart</title>
     <meta name="description" content="نودمارت هو سوق الطعام الذكي الذي يربطك بأفضل المطاعم والبائعين المحليين. اكتشف، اطلب، واستمتع. NoodMart - The Smart Food Marketplace." />
     <meta property="og:title" content="نودمارت - سوق الطعام الذكي | NoodMart" />
     <meta property="og:description" content="اكتشف أفضل المطاعم المحلية واطلب طعامك المفضل مع نودمارت." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://noodmart.com" />
+    <meta property="og:image" content="https://noodmart.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="نودمارت - سوق الطعام الذكي | NoodMart" />
+    <meta name="twitter:description" content="اكتشف أفضل المطاعم المحلية واطلب طعامك المفضل مع نودمارت." />
+    <meta name="twitter:image" content="https://noodmart.com/og-image.jpg" />
     <link rel="canonical" href="https://noodmart.com" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "NoodMart",
+        "url": "https://noodmart.com",
+        "logo": "https://noodmart.com/favicon.png",
+        "description": "NoodMart is a smart food marketplace connecting customers with local restaurants and vendors in Egypt.",
+        "areaServed": ["Samanoud, Gharbia, Egypt", "Hadayek El Kobba, Cairo, Egypt"]
+      }
+    </script>
+    <script>
+      // Avoid an Arabic->English flash on first paint for browsers that clearly prefer English.
+      (function () {
+        var prefersEnglish = (navigator.language || navigator.userLanguage || '')
+          .toLowerCase()
+          .startsWith('en');
+        if (prefersEnglish) {
+          document.documentElement.lang = 'en';
+          document.documentElement.dir = 'ltr';
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

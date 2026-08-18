@@ -1,6 +1,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import heroBurger from '@/assets/hero-burger.png';
+import heroBurgerWebp from '@/assets/hero-burger.webp';
 import heroPizza from '@/assets/hero-pizza.png';
+import heroPizzaWebp from '@/assets/hero-pizza.webp';
 
 const HeroSection = () => {
   const { lang, t } = useLanguage();
@@ -62,18 +64,29 @@ const HeroSection = () => {
               <div className="absolute inset-0 rounded-full bg-primary/20 blur-3xl scale-75" />
               
               {/* Burger */}
-              <img
-                src={heroBurger}
-                alt="Premium 3D burger"
-                className="relative z-10 w-full float-animation drop-shadow-2xl"
-              />
-              
+              <picture>
+                <source srcSet={heroBurgerWebp} type="image/webp" />
+                <img
+                  src={heroBurger}
+                  alt="Premium 3D burger"
+                  width={1024}
+                  height={1024}
+                  fetchPriority="high"
+                  className="relative z-10 w-full float-animation drop-shadow-2xl"
+                />
+              </picture>
+
               {/* Pizza floating secondary */}
-              <img
-                src={heroPizza}
-                alt="Premium 3D pizza"
-                className="absolute -bottom-8 -left-8 md:-left-16 w-40 md:w-56 float-animation-delayed drop-shadow-xl z-20"
-              />
+              <picture>
+                <source srcSet={heroPizzaWebp} type="image/webp" />
+                <img
+                  src={heroPizza}
+                  alt="Premium 3D pizza"
+                  width={1024}
+                  height={1024}
+                  className="absolute -bottom-8 -left-8 md:-left-16 w-40 md:w-56 float-animation-delayed drop-shadow-xl z-20"
+                />
+              </picture>
             </div>
           </div>
         </div>

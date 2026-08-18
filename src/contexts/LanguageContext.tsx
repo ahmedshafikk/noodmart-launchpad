@@ -232,8 +232,13 @@ const translations: Record<Lang, Record<string, string>> = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const getInitialLang = (): Lang => {
+  if (typeof document !== 'undefined' && document.documentElement.lang === 'en') return 'en';
+  return 'ar';
+};
+
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [lang, setLang] = useState<Lang>('ar');
+  const [lang, setLang] = useState<Lang>(getInitialLang);
   const dir = lang === 'ar' ? 'rtl' : 'ltr';
 
   useEffect(() => {

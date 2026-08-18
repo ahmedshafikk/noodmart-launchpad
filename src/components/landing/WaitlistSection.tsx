@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CheckCircle } from 'lucide-react';
 
+const WAITLIST_STORAGE_KEY = 'noodmart_waitlist_submitted';
+
 const GOOGLE_FORM_ACTION_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSex2R2HFWmD3UImiDVq-gTAtF1YHuRT3qPsWVvNoOzZZy5HmQ/formResponse';
 
@@ -20,12 +22,15 @@ const GOOGLE_FORM_ROLE_LABELS: Record<string, string> = {
 const WaitlistSection = () => {
   const { lang, t } = useLanguage();
   const fontClass = lang === 'ar' ? 'font-arabic' : 'font-english';
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(
+    () => typeof window !== 'undefined' && !!localStorage.getItem(WAITLIST_STORAGE_KEY)
+  );
   const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', role: 'customer' });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (submitting || submitted) return;
     setSubmitting(true);
 
     const params = new URLSearchParams();
@@ -47,6 +52,7 @@ const WaitlistSection = () => {
     } finally {
       setSubmitting(false);
       setSubmitted(true);
+      localStorage.setItem(WAITLIST_STORAGE_KEY, formData.email);
     }
   };
 
