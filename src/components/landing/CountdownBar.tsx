@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 // Placeholder launch date — update once the real date is confirmed.
-export const LAUNCH_DATE = new Date('2026-09-06T00:00:00');
+export const LAUNCH_DATE = new Date('2026-10-15T00:00:00');
 
 const getTimeLeft = (target: Date) => {
   const diff = Math.max(0, target.getTime() - Date.now());
